@@ -9,5 +9,6 @@ package BackEnd;
  * @author nisit
  */
 public class Ingrediente {
-    
+    //Este es un comentario
+    private String nombre;
 }
