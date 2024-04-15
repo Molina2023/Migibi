@@ -9,6 +9,16 @@ package BackEnd;
  * @author nisit
  */
 public class Enum {
+    
+    public enum Unidad {
+        KILOS,
+        CUDAS,
+        CUDITAS,
+        LITROS,
+        GRAMOS,
+        TAZAS;
+    }
+    
     public enum Clasificacion {
         FRUTA,
         VEGETAL,
@@ -16,5 +26,28 @@ public class Enum {
         CEREAL,
         ESPECIE,
         MARISCO; 
+    }
+    
+    public enum Dificultad {
+        FACIL,
+        INTERMEDIO,
+        AVANZADO;
+    }
+    
+    public enum Comida {
+        DESAYUNO,
+        ALMUERZO,
+        COMIDA,
+        MERIENDA,
+        CENA,
+        BEBIDA,
+        POSTRE,
+    }
+    
+    public enum Preferencias {
+        VEGANO,
+        VEGETARIANO,
+        OMNIVORO,
+        CELIACO,
     }
 }

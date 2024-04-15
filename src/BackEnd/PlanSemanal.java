@@ -9,5 +9,27 @@ package BackEnd;
  * @author nisit
  */
 public class PlanSemanal {
+    public void NuevoPlan() {
+        
+    }
     
+    public void SeleccionarIngredientes() {
+        
+    }
+    
+    public void OrdenarRecetas() {
+        
+    }
+    
+    public void HacerListaCompra() {
+        
+    }
+    
+    public void HacerAnuncio() {
+        
+    }
+    
+    public void EstablecerPlan() {
+        
+    }
 }
