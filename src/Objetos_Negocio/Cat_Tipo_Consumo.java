@@ -10,12 +10,10 @@ import java.sql.Timestamp;
  *
  * @author nisit
  */
-public class Receta_Instrucciones {
+public class Cat_Tipo_Consumo {
     /*
-    Id_Receta_Instrucciones int primary key auto_increment,
-    Id_Receta int not null,
-    Instruccion varchar(3000) not null,
-    Orden int not null,
+    Id_Tipo_Consumo int primary key auto_increment,
+    Tipo_Consumo varchar(250),
     Activo bool not null default(1),
     Id_Usuario_Alta int not null,
     Fecha_Alta datetime not null ,
@@ -24,10 +22,8 @@ public class Receta_Instrucciones {
     Id_Usuario_Baja int  null, 
     Fecha_Baja datetime  null,
     */
-    private int Id_Receta_Instrucciones;
-    private int Id_Receta;
-    private String Instruccion;
-    private int Orden;
+    private int Id_Tipo_Consumo;
+    private String Tipo_Consumo;
     
     private boolean Activo;
     private int Id_Usuario_Alta;
@@ -37,56 +33,37 @@ public class Receta_Instrucciones {
     private int Id_Usuario_Baja;
     private Timestamp Fecha_Baja;
 
-    public Receta_Instrucciones() {
-    }
-
-    public Receta_Instrucciones(int Id_Receta, String Instruccion, int Orden, boolean Activo, int Id_Usuario_Alta, Timestamp Fecha_Alta) {
-        this.Id_Receta = Id_Receta;
-        this.Instruccion = Instruccion;
-        this.Orden = Orden;
+    public Cat_Tipo_Consumo() {}
+    
+    public Cat_Tipo_Consumo(String Tipo_Consumo, boolean Activo, int Id_Usuario_Alta, Timestamp Fecha_Alta) {
+        this.Tipo_Consumo = Tipo_Consumo;
         this.Activo = Activo;
         this.Id_Usuario_Alta = Id_Usuario_Alta;
         this.Fecha_Alta = Fecha_Alta;
     }
 
-    public Receta_Instrucciones(int Id_Receta_Instrucciones, int Id_Receta, String Instruccion, int Orden, int Id_Usuario_Modif) {
-        this.Id_Receta_Instrucciones = Id_Receta_Instrucciones;
-        this.Id_Receta = Id_Receta;
-        this.Instruccion = Instruccion;
-        this.Orden = Orden;
+    public Cat_Tipo_Consumo(int Id_Tipo_Consumo, String Tipo_Consumo, boolean Activo, int Id_Usuario_Modif, Timestamp Fecha_Modif) {
+        this.Id_Tipo_Consumo = Id_Tipo_Consumo;
+        this.Tipo_Consumo = Tipo_Consumo;
+        this.Activo = Activo;
         this.Id_Usuario_Modif = Id_Usuario_Modif;
+        this.Fecha_Modif = Fecha_Modif;
     }
 
-    public int getId_Receta_Instrucciones() {
-        return Id_Receta_Instrucciones;
+    public int getId_Tipo_Consumo() {
+        return Id_Tipo_Consumo;
     }
 
-    public void setId_Receta_Instrucciones(int Id_Receta_Instrucciones) {
-        this.Id_Receta_Instrucciones = Id_Receta_Instrucciones;
+    public void setId_Tipo_Consumo(int Id_Tipo_Consumo) {
+        this.Id_Tipo_Consumo = Id_Tipo_Consumo;
     }
 
-    public int getId_Receta() {
-        return Id_Receta;
+    public String getTipo_Consumo() {
+        return Tipo_Consumo;
     }
 
-    public void setId_Receta(int Id_Receta) {
-        this.Id_Receta = Id_Receta;
-    }
-
-    public String getInstruccion() {
-        return Instruccion;
-    }
-
-    public void setInstruccion(String Instruccion) {
-        this.Instruccion = Instruccion;
-    }
-
-    public int getOrden() {
-        return Orden;
-    }
-
-    public void setOrden(int Orden) {
-        this.Orden = Orden;
+    public void setTipo_Consumo(String Tipo_Consumo) {
+        this.Tipo_Consumo = Tipo_Consumo;
     }
 
     public boolean isActivo() {
@@ -144,6 +121,10 @@ public class Receta_Instrucciones {
     public void setFecha_Baja(Timestamp Fecha_Baja) {
         this.Fecha_Baja = Fecha_Baja;
     }
+    
+    
+    
+    
     
     
 }

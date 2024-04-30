@@ -5,18 +5,16 @@
 package Objetos_Negocio;
 
 import java.sql.Timestamp;
-import java.math.BigDecimal;
+
 /**
  *
  * @author nisit
  */
-public class Receta_Detalle {
+public class Cat_Unidad_Medida {
     /*
-    Id_Receta_Detalle int primary key auto_increment,
-    Id_Receta int not null,
-    Id_Tipo_Alimento int not null,
-    Id_Unidad_Medida int not null,
-    Cantidad decimal null,
+    Id_Unidad_Medida int primary key auto_increment,
+    Unidad_Medida varchar(50)  not null,
+    Abreviatura varchar(5)  not null,
     Activo bool not null default(1),
     Id_Usuario_Alta int not null,
     Fecha_Alta datetime not null ,
@@ -25,12 +23,10 @@ public class Receta_Detalle {
     Id_Usuario_Baja int  null, 
     Fecha_Baja datetime  null,
     */
-    private int Id_Receta_Detalle;
-    private int Id_Receta;
-    private int Id_Tipo_Alimento;
+    
     private int Id_Unidad_Medida;
-    private BigDecimal Cantidad;
-    private int Id_Alimento;
+    private String Unidad_Medida;
+    private String Abreviatura;
     
     private boolean Activo;
     private int Id_Usuario_Alta;
@@ -40,53 +36,24 @@ public class Receta_Detalle {
     private int Id_Usuario_Baja;
     private Timestamp Fecha_Baja;
 
-    public Receta_Detalle() {
+    public Cat_Unidad_Medida() {
     }
-
     
-    public Receta_Detalle(int Id_Receta, int Id_Tipo_Alimento, int Id_Unidad_Medida, BigDecimal Cantidad, int Id_Alimento, int Id_Usuario_Alta) {
-        this.Id_Receta = Id_Receta;
-        this.Id_Tipo_Alimento = Id_Tipo_Alimento;
-        this.Id_Unidad_Medida = Id_Unidad_Medida;
-        this.Cantidad = Cantidad;
-        this.Id_Alimento = Id_Alimento;
+    public Cat_Unidad_Medida(String Unidad_Medida, String Abreviatura, boolean Activo, int Id_Usuario_Alta, Timestamp Fecha_Alta) {
+        this.Unidad_Medida = Unidad_Medida;
+        this.Abreviatura = Abreviatura;
         this.Activo = Activo;
         this.Id_Usuario_Alta = Id_Usuario_Alta;
         this.Fecha_Alta = Fecha_Alta;
     }
 
-    public Receta_Detalle(int Id_Receta_Detalle, int Id_Receta, int Id_Tipo_Alimento, int Id_Unidad_Medida, BigDecimal Cantidad, int Id_Alimento, int Id_Usuario_Modif) {
-        this.Id_Receta_Detalle = Id_Receta_Detalle;
-        this.Id_Receta = Id_Receta;
-        this.Id_Tipo_Alimento = Id_Tipo_Alimento;
+    public Cat_Unidad_Medida(int Id_Unidad_Medida, String Unidad_Medida, String Abreviatura, boolean Activo, int Id_Usuario_Modif, Timestamp Fecha_Modif) {
         this.Id_Unidad_Medida = Id_Unidad_Medida;
-        this.Cantidad = Cantidad;
-        this.Id_Alimento = Id_Alimento;
-        this.Id_Usuario_Alta = Id_Usuario_Modif;
-    }
-    
-    public int getId_Receta_Detalle() {
-        return Id_Receta_Detalle;
-    }
-
-    public void setId_Receta_Detalle(int Id_Receta_Detalle) {
-        this.Id_Receta_Detalle = Id_Receta_Detalle;
-    }
-
-    public int getId_Receta() {
-        return Id_Receta;
-    }
-
-    public void setId_Receta(int Id_Receta) {
-        this.Id_Receta = Id_Receta;
-    }
-
-    public int getId_Tipo_Alimento() {
-        return Id_Tipo_Alimento;
-    }
-
-    public void setId_Tipo_Alimento(int Id_Tipo_Alimento) {
-        this.Id_Tipo_Alimento = Id_Tipo_Alimento;
+        this.Unidad_Medida = Unidad_Medida;
+        this.Abreviatura = Abreviatura;
+        this.Activo = Activo;
+        this.Id_Usuario_Modif = Id_Usuario_Modif;
+        this.Fecha_Modif = Fecha_Modif;
     }
 
     public int getId_Unidad_Medida() {
@@ -97,20 +64,20 @@ public class Receta_Detalle {
         this.Id_Unidad_Medida = Id_Unidad_Medida;
     }
 
-    public BigDecimal getCantidad() {
-        return Cantidad;
+    public String getUnidad_Medida() {
+        return Unidad_Medida;
     }
 
-    public void setCantidad(BigDecimal Cantidad) {
-        this.Cantidad = Cantidad;
+    public void setUnidad_Medida(String Unidad_Medida) {
+        this.Unidad_Medida = Unidad_Medida;
     }
 
-    public int getId_Alimento() {
-        return Id_Alimento;
+    public String getAbreviatura() {
+        return Abreviatura;
     }
 
-    public void setId_Alimento(int Id_Alimento) {
-        this.Id_Alimento = Id_Alimento;
+    public void setAbreviatura(String Abreviatura) {
+        this.Abreviatura = Abreviatura;
     }
 
     public boolean isActivo() {

@@ -4,27 +4,16 @@
  */
 package Objetos_Negocio;
 
+import java.sql.Timestamp;
+
 /**
  *
  * @author nisit
  */
-import java.sql.Timestamp;
-
-public class Tipo_Alimento {
-    /*
-	Id_Tipo_Alimento int primary key auto_increment,
-    Tipo_Alimento varchar(250)  not null,
-    Activo bool not null default(1),
-    Id_Usuario_Alta int not null,
-    Fecha_Alta datetime not null ,
-    Id_Usuario_Modif int null,
-    Fecha_Modif datetime null,
-    Id_Usuario_Baja int  null, 
-    Fecha_Baja datetime  null,
-    */
-    
+public class Cat_Tipo_Alimento {
     private int Id_Tipo_Alimento;
     private String Tipo_Alimento;
+            
     private boolean Activo;
     private int Id_Usuario_Alta;
     private Timestamp Fecha_Alta;
@@ -33,12 +22,24 @@ public class Tipo_Alimento {
     private int Id_Usuario_Baja;
     private Timestamp Fecha_Baja;
 
-    public Tipo_Alimento(String Tipo_Alimento, boolean Activo, Timestamp Fecha_Alta) {
+    public Cat_Tipo_Alimento() {
+    }
+    
+    public Cat_Tipo_Alimento(String Tipo_Alimento, boolean Activo, int Id_Usuario_Alta, Timestamp Fecha_Alta) {
         this.Tipo_Alimento = Tipo_Alimento;
         this.Activo = Activo;
+        this.Id_Usuario_Alta = Id_Usuario_Alta;
         this.Fecha_Alta = Fecha_Alta;
     }
 
+    public Cat_Tipo_Alimento(int Id_Tipo_Alimento, String Tipo_Alimento, boolean Activo, int Id_Usuario_Modif, Timestamp Fecha_Modif) {
+        this.Id_Tipo_Alimento = Id_Tipo_Alimento;
+        this.Tipo_Alimento = Tipo_Alimento;
+        this.Activo = Activo;
+        this.Id_Usuario_Modif = Id_Usuario_Modif;
+        this.Fecha_Modif = Fecha_Modif;
+    }
+    
     
     
     public int getId_Tipo_Alimento() {

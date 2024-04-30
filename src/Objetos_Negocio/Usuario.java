@@ -11,11 +11,21 @@ package Objetos_Negocio;
 public class Usuario {
     private int Id_Usuario;
     private String Nombre_Usuario;
-    private String Contrasenia;
+    private String Contraseña;
+    private int Cohabitantes;
 
-    public Usuario(String Nombre_Usuario, String Contrasenia) {
+    public Usuario() {
+    }
+
+    public Usuario(String Nombre_Usuario, String Contraseña, int Cohabitantes) {
         this.Nombre_Usuario = Nombre_Usuario;
-        this.Contrasenia = Contrasenia;
+        this.Contraseña = Contraseña;
+        this.Cohabitantes = Cohabitantes;
+    }
+
+    public Usuario(String Nombre_Usuario, String Contraseña) {
+        this.Nombre_Usuario = Nombre_Usuario;
+        this.Contraseña = Contraseña;
     }
 
     public int getId_Usuario() {
@@ -34,12 +44,20 @@ public class Usuario {
         this.Nombre_Usuario = Nombre_Usuario;
     }
 
-    public String getContrasenia() {
-        return Contrasenia;
+    public String getContraseña() {
+        return Contraseña;
     }
 
-    public void setContrasenia(String Contrasenia) {
-        this.Contrasenia = Contrasenia;
+    public void setContraseña(String Contraseña) {
+        this.Contraseña = Contraseña;
+    }
+
+    public int getCohabitantes() {
+        return Cohabitantes;
+    }
+
+    public void setCohabitantes(int Cohabitantes) {
+        this.Cohabitantes = Cohabitantes;
     }
     
     

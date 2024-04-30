@@ -1,8 +1,8 @@
 
 package Interfaces;
 
-import Reglas_Negocio.RN_Tipo_Alimento;
-import Objetos_Negocio.Tipo_Alimento;
+import Reglas_Negocio.RN_Cat_Tipo_Alimento;
+//import Objetos_Negocio.Tipo_Alimento;
 import Objetos_Negocio.Usuario;
 import Reglas_Negocio.Conexion;
 import Reglas_Negocio.RN_Usuario;
@@ -20,7 +20,7 @@ import java.util.Date;
  */
 public class Interfaz_Inicio extends javax.swing.JFrame {
 
-    RN_Tipo_Alimento RN_Tipo_Alimento = new RN_Tipo_Alimento();
+    RN_Cat_Tipo_Alimento RN_Tipo_Alimento = new RN_Cat_Tipo_Alimento();
     RN_Usuario RN_Usuario = new RN_Usuario();
     
     Conexion inst = new Conexion();
@@ -443,7 +443,7 @@ public class Interfaz_Inicio extends javax.swing.JFrame {
     }
     
     void Crear_Tipo_Alimento () {
-        Tipo_Alimento tipo_alimento;
+        //Tipo_Alimento tipo_alimento;
         //int Id_Tipo_Alimento = Integer.parseInt(this.Id_Alimento_Text.getText());
         String Tipo_Alimento = this.Nombre_Alimento_Text.getText();
         boolean Activo = true;
@@ -452,9 +452,9 @@ public class Interfaz_Inicio extends javax.swing.JFrame {
         long millis1 =  new java.util.Date().getTime();
         java.sql.Timestamp Fecha_Alta = new java.sql.Timestamp(millis1);
 
-        tipo_alimento = new Tipo_Alimento(Tipo_Alimento, Activo, Fecha_Alta);
+        //tipo_alimento = new Tipo_Alimento(Tipo_Alimento, Activo, Fecha_Alta);
         
-        RN_Tipo_Alimento.Crear_Tipo_Alimento(tipo_alimento);
+        //RN_Tipo_Alimento.Crear_Tipo_Alimento(tipo_alimento);
     }
     
     
