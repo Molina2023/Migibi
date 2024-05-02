@@ -9,8 +9,11 @@ package BackEnd;
  * @author nisit
  */
 import Objetos_Negocio.Cat_Alimento;
+import Objetos_Negocio.vw_Stock_Detalle_Disponible;
 import Reglas_Negocio.RN_Cat_Alimento;
+import Reglas_Negocio.RN_vw_Receta_Detalle_Disponible;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -24,12 +27,13 @@ public class MigibiV1 {
         
         //Prueba del método RN_Cat_Alimento.Consultar_Alimento();
            
-        RN_Cat_Alimento RN_Cat_Alimento = new RN_Cat_Alimento();
-        List<Cat_Alimento> listaAlimentos = RN_Cat_Alimento.Consultar_Alimento("");
-        for (int i = 0; i < listaAlimentos.size(); i++) {
-            System.out.println(listaAlimentos.get(i).getAlimento());
-        }
+        RN_vw_Receta_Detalle_Disponible fun = new RN_vw_Receta_Detalle_Disponible();
+        List<vw_Stock_Detalle_Disponible> listaRecetas = new ArrayList<>();
+        listaRecetas = fun.Consultar_Recetas_Disponible();
         
+        for (int i = 0; i < listaRecetas.size(); i++) {
+            System.out.println(listaRecetas.get(i).getId_Stock_Detalle());
+        }
         
         
         /* //Prueba RN_Cat_Alimento.Consultar_Alimento(1);
